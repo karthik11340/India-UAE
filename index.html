@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Evolution of India-UAE Partnership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: translateX(-50%);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 300px;
+        }
+        .chart-container-sm {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            height: 250px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 350px;
+            }
+            .chart-container-sm {
+                height: 300px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 400px;
+            }
+            .chart-container-sm {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center p-12 md:p-16 bg-black text-white rounded-none mb-16">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight">India-UAE Strategic Partnership</h1>
+            <h2 class="text-xl md:text-2xl font-light tracking-wide uppercase">1975-2025: Five Decades of Strategic Convergence</h2>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-stretch">
+            <div class="md:col-span-1 bg-black text-white p-10 rounded-none text-center flex flex-col justify-center">
+                <p class="text-sm font-semibold mb-3 tracking-widest uppercase">Current Era</p>
+                <p class="text-8xl font-black mb-2">15+</p>
+                <p class="text-lg font-medium tracking-wide">Strategic MoUs</p>
+                <p class="text-xs text-gray-400 mt-4 uppercase tracking-wider">Per Diplomatic Visit</p>
+            </div>
+            <div class="md:col-span-2 bg-white p-10 rounded-none border border-gray-200">
+                <h3 class="text-3xl md:text-4xl font-black text-black mb-6 tracking-tight">A Transformed Relationship</h3>
+                <p class="text-gray-700 leading-relaxed mb-4 font-light">The India-UAE relationship has evolved from transactional engagement defined by labor exports and hydrocarbon purchases into a complex, multi-layered strategic alliance. This transformation—codified through treaties, agreements, and MoUs—reflects changing geopolitical priorities and the mutual ambition to construct a "Comprehensive Strategic Partnership" targeting <strong class="font-semibold">US$100 billion in bilateral trade</strong>.</p>
+                <p class="text-gray-700 leading-relaxed font-light">From the foundational Cultural Agreement of 1975 to the futuristic Critical Minerals and Nuclear Cooperation pacts of 2024, this visualization tracks five decades of deepening cooperation across economic, technological, security, and cultural domains.</p>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 md:p-12 rounded-none border border-gray-200 mb-16">
+            <h3 class="text-3xl md:text-4xl font-black text-center mb-6 tracking-tight">Timeline: Evolution of Strategic Convergence</h3>
+            <p class="text-base text-gray-600 max-w-4xl mx-auto text-center mb-12 font-light">The increasing number of MoUs tells only part of the story. The <span class="font-semibold text-black">qualitative nature</span> of these agreements reveals a deliberate strategy—moving from soft power frameworks to hard infrastructure, and ultimately to deep economic and technological integration.</p>
+            
+            <div class="relative border-l-4 border-blue-400 ml-8">
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-blue-600"></div>
+                    <p class="text-xl font-bold text-blue-800 mb-1">1975–1992: Foundational Diplomacy</p>
+                    <p class="text-lg font-semibold text-blue-600 mb-2">1-2 Agreements per Visit</p>
+                    <p class="text-sm text-gray-600 mb-3"><em>Creating the social license for diaspora integration and labor migration</em></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Cultural Agreement (1975)</strong> - Mandated textbook accuracy about each other's history, established framework for 3.5M diaspora</li>
+                        <li><strong>Civil Aviation Agreement (1989)</strong> - Operationalized the "Air Bridge" for labor movement</li>
+                        <li><strong>Double Taxation Avoidance Agreement (1992)</strong> - First economic structuring beyond commodity trade</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-blue-500"></div>
+                    <p class="text-xl font-bold text-blue-800 mb-1">1994–2010: Security Consolidation</p>
+                    <p class="text-lg font-semibold text-blue-500 mb-2">3-5 MoUs per Visit</p>
+                    <p class="text-sm text-gray-600 mb-3"><em>Building legal architecture for justice, extradition, and counter-terrorism</em></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Anti-Narcotics Agreement (1994)</strong> - Intelligence sharing on terror financing networks</li>
+                        <li><strong>Extradition Treaty (1999)</strong> - Ended "safe haven" status; enabled deportation of organized crime figures</li>
+                        <li><strong>Mutual Legal Assistance Treaty (1999)</strong> - Cross-border evidence sharing for investigations</li>
+                        <li><strong>Defense Cooperation MoU (2003)</strong> - Established Joint Defence Cooperation Committee (JDCC)</li>
+                        <li><strong>Manpower Sourcing MoU (2006, 2011)</strong> - Integrated "eMigrate" system for worker protection</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-teal-500"></div>
+                    <p class="text-xl font-bold text-blue-800 mb-1">2015–2020: Strategic Elevation</p>
+                    <p class="text-lg font-semibold text-teal-600 mb-2">8-12 MoUs per Visit</p>
+                    <p class="text-sm text-gray-600 mb-3"><em>Investment mobilization and energy equity partnerships - the "Link West" policy</em></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>Comprehensive Strategic Partnership (2015)</strong> - $75B investment target from UAE sovereign funds</li>
+                        <li><strong>ADNOC-ISPRL Strategic Reserves (2017)</strong> - UAE stores crude in India's Mangalore underground caverns</li>
+                        <li><strong>Lower Zakum 10% Equity (2018)</strong> - First Indian upstream oil stake in UAE (40-year concession)</li>
+                        <li><strong>Currency Swap Agreement (2016)</strong> - RBI-UAE Central Bank liquidity framework</li>
+                        <li><strong>Space Cooperation (ISRO-UAESA, 2016)</strong> - Mars mission support, satellite tech</li>
+                        <li><strong>RuPay Launch in UAE (2019)</strong> - Digital financial integration begins</li>
+                        <li><strong>BAPS Temple Land Allocation</strong> - Cultural diplomacy milestone</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot bg-teal-400"></div>
+                    <p class="text-xl font-bold text-blue-800 mb-1">2022–2025: Comprehensive Integration</p>
+                    <p class="text-lg font-semibold text-teal-400 mb-2">10-15+ MoUs & Working Groups</p>
+                    <p class="text-sm text-gray-600 mb-3"><em>Deep economic merger, financial interoperability, and future tech alignment</em></p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li><strong>CEPA (2022)</strong> - Negotiated in record 88 days; 90% duty-free exports, $100B trade target</li>
+                        <li><strong>Food Security Corridor (2022)</strong> - DP World & Al Dahra logistics for agricultural supply chains</li>
+                        <li><strong>IIT Delhi Abu Dhabi Campus (2023)</strong> - First overseas IIT for energy, sustainability, AI research</li>
+                        <li><strong>Local Currency Settlement (2023)</strong> - INR-AED trade to reduce dollar dependence</li>
+                        <li><strong>UPI-AANI Linkage (2024)</strong> - Instant payment platform integration</li>
+                        <li><strong>RuPay-JAYWAN Integration (2024)</strong> - Domestic card systems interlinked</li>
+                        <li><strong>Bilateral Investment Treaty (2024)</strong> - Robust investor protection framework</li>
+                        <li><strong>IMEC Framework Agreement (2024)</strong> - India-Middle East-Europe Corridor operationalization</li>
+                        <li><strong>Nuclear Cooperation (NPCIL-ENEC, 2024)</strong> - Civil nuclear collaboration, plant O&M</li>
+                        <li><strong>Critical Minerals Partnership (2024)</strong> - Joint acquisition of global lithium/cobalt/copper assets</li>
+                        <li><strong>15-Year LNG Supply (2025)</strong> - 1 MMTPA from ADNOC to IOCL for energy transition</li>
+                        <li><strong>ADGM-GIFT City Link (2022)</strong> - Financial hub regulatory cooperation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white p-8 md:p-10 rounded-none border border-gray-200">
+                <h3 class="text-3xl font-black text-center mb-6 tracking-tight">Quantitative Growth</h3>
+                <p class="text-base text-gray-600 text-center mb-10 font-light">Exponential increase in agreements per visit reflecting deepening trust and expanding strategic agendas.</p>
+                <div class="chart-container">
+                    <canvas id="mouGrowthChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 md:p-10 rounded-none border border-gray-200">
+                <h3 class="text-3xl font-black text-center mb-6 tracking-tight">Qualitative Transformation</h3>
+                <p class="text-base text-gray-600 text-center mb-10 font-light">Shift from foundational frameworks to high-tech strategic sectors.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="text-lg font-bold text-center mb-4 uppercase tracking-wide text-gray-800">Security Era<br/><span class="text-sm font-normal">(1994-2010)</span></h4>
+                        <div class="chart-container-sm">
+                            <canvas id="foundationalChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-center mb-4 uppercase tracking-wide text-black">Strategic Era<br/><span class="text-sm font-normal">(2015-Present)</span></h4>
+                        <div class="chart-container-sm">
+                            <canvas id="strategicChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-blue-900 to-teal-700 text-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+            <h3 class="text-3xl font-bold text-center mb-6">Key Milestones & Turning Points</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white/10 backdrop-blur p-5 rounded-lg">
+                    <p class="text-4xl mb-2">📜</p>
+                    <p class="text-sm opacity-90 mb-1">1975</p>
+                    <p class="font-bold text-lg">Cultural Foundation</p>
+                    <p class="text-sm mt-2">First agreement during Sheikh Zayed's historic visit to India</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-lg">
+                    <p class="text-4xl mb-2">⚖️</p>
+                    <p class="text-sm opacity-90 mb-1">1999</p>
+                    <p class="font-bold text-lg">Security Architecture</p>
+                    <p class="text-sm mt-2">Extradition Treaty ends "safe haven" era for fugitives</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-lg">
+                    <p class="text-4xl mb-2">🤝</p>
+                    <p class="text-sm opacity-90 mb-1">2015</p>
+                    <p class="font-bold text-lg">Strategic Reset</p>
+                    <p class="text-sm mt-2">First PM visit in 34 years; $75B investment pledge</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur p-5 rounded-lg">
+                    <p class="text-4xl mb-2">🔗</p>
+                    <p class="text-sm opacity-90 mb-1">2022</p>
+                    <p class="font-bold text-lg">Economic Merger</p>
+                    <p class="text-sm mt-2">CEPA signed in record 88 days; $100B trade target</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+            <h3 class="text-3xl font-bold text-center mb-4">10 Strategic Sectors: Deep Integration Framework</h3>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-10">The modern partnership spans 10 interconnected strategic clusters, each representing long-term mutual investment and alignment of national interests.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="p-6 rounded-lg border-2 border-blue-600 bg-blue-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">💰</p>
+                    <h4 class="text-xl font-bold text-blue-800 mb-2">Trade & Financial Integration</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>CEPA (90% duty-free exports)</li>
+                        <li>Local currency settlement (INR-AED)</li>
+                        <li>UPI-AANI instant payments</li>
+                        <li>RuPay-JAYWAN card linking</li>
+                        <li>ADGM-GIFT City financial hub cooperation</li>
+                        <li>BSE-ADX stock exchange linkage</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-green-600 bg-green-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">⚡</p>
+                    <h4 class="text-xl font-bold text-green-800 mb-2">Energy Partnership</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>ADNOC strategic petroleum reserves (Mangalore)</li>
+                        <li>Lower Zakum 10% equity (40-yr concession)</li>
+                        <li>Abu Dhabi Onshore Block 1 (Urja Bharat)</li>
+                        <li>15-year LNG supply (1 MMTPA)</li>
+                        <li>Renewable energy co-development</li>
+                        <li>Civil nuclear cooperation (NPCIL-ENEC)</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-purple-600 bg-purple-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🚢</p>
+                    <h4 class="text-xl font-bold text-purple-800 mb-2">Logistics & Connectivity</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>DP World logistics investments</li>
+                        <li>IMEC (India-Middle East-Europe Corridor)</li>
+                        <li>Food security corridor</li>
+                        <li>Maritime transport framework</li>
+                        <li>J&K multi-modal logistics park</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-red-600 bg-red-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🛡️</p>
+                    <h4 class="text-xl font-bold text-red-800 mb-2">Defense & Security</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>Extradition treaty (1999)</li>
+                        <li>MLAT for criminal evidence sharing</li>
+                        <li>Joint Defence Cooperation Committee (JDCC)</li>
+                        <li>Counter-terrorism operational cooperation</li>
+                        <li>Cyber-security agreements</li>
+                        <li>Defense industry cooperation MoU</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-yellow-600 bg-yellow-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">⛏️</p>
+                    <h4 class="text-xl font-bold text-yellow-800 mb-2">Critical Minerals & Resources</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>IRH partnership with KABIL, Oil India, OVL</li>
+                        <li>Joint global lithium/cobalt/copper acquisition</li>
+                        <li>Battery technology supply chain</li>
+                        <li>EV transition resource security</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-lime-600 bg-lime-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🌾</p>
+                    <h4 class="text-xl font-bold text-lime-800 mb-2">Food & Agriculture</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>Food security corridor (DP World + Al Dahra)</li>
+                        <li>ADQ-backed food parks in Gujarat</li>
+                        <li>Agri supply chain integration</li>
+                        <li>Direct market access for Indian farmers</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-indigo-600 bg-indigo-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🎓</p>
+                    <h4 class="text-xl font-bold text-indigo-800 mb-2">Education & Research</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>IIT Delhi Abu Dhabi campus (first overseas IIT)</li>
+                        <li>Skill development & qualification recognition</li>
+                        <li>Polar research cooperation (NCPOR partnership)</li>
+                        <li>AI, energy, and sustainability research hubs</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-cyan-600 bg-cyan-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">💻</p>
+                    <h4 class="text-xl font-bold text-cyan-800 mb-2">Digital Infrastructure</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>Digital public infrastructure collaboration</li>
+                        <li>High-power computing & data centers</li>
+                        <li>AI technology cooperation</li>
+                        <li>Cyber-security frameworks</li>
+                        <li>Ministry of Investment-MeitY partnership</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-pink-600 bg-pink-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🚀</p>
+                    <h4 class="text-xl font-bold text-pink-800 mb-2">Space Cooperation</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>ISRO-UAESA strategic partnership</li>
+                        <li>Mars mission technical support</li>
+                        <li>Satellite navigation systems</li>
+                        <li>Remote sensing technology</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 rounded-lg border-2 border-orange-600 bg-orange-50 hover:shadow-lg transition-shadow">
+                    <p class="text-4xl mb-3">🎭</p>
+                    <h4 class="text-xl font-bold text-orange-800 mb-2">Culture & Heritage</h4>
+                    <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                        <li>1975 Cultural Agreement (foundation)</li>
+                        <li>BAPS Mandir Abu Dhabi</li>
+                        <li>National Archives cooperation</li>
+                        <li>Museums & maritime heritage MoUs</li>
+                        <li>Lothal Maritime Heritage Complex</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-blue-50 to-teal-50 p-6 md:p-8 rounded-lg shadow-lg mb-12">
+            <h3 class="text-3xl font-bold text-center mb-6">Strategic Patterns: From Transactional to Transformational</h3>
+            <p class="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto">Analysis of 50 years of bilateral agreements reveals six key patterns that define the evolution of this partnership.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">🔄 Evolution: Transactional → Transformational</h4>
+                    <p class="text-gray-700 mb-2">The relationship evolved from simple buyer-seller dynamics to equity partnerships and co-development:</p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li>From oil purchases → upstream equity stakes (Lower Zakum, Block 1)</li>
+                        <li>From labor export → skill recognition & education partnerships (IIT Abu Dhabi)</li>
+                        <li>From remittances → integrated financial systems (UPI-AANI)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">🌍 UAE as India's Gateway to the West</h4>
+                    <p class="text-gray-700 mb-2">UAE positioned as India's logistics command center for West Asia and Europe:</p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li>DP World's extensive port investments</li>
+                        <li>IMEC corridor making UAE a critical transit hub</li>
+                        <li>Food security corridor leveraging UAE's logistics prowess</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">💼 Sovereign Fund Strategic Prioritization</h4>
+                    <p class="text-gray-700 mb-2">India becomes core to UAE's post-oil diversification strategy:</p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li>ADIA, Mubadala, ADQ targeting Indian infrastructure</li>
+                        <li>$75B investment commitment (2015)</li>
+                        <li>Investments across renewables, logistics, food, fintech, startups</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">🏦 Complete Financial System Interoperability</h4>
+                    <p class="text-gray-700 mb-2">Building a shared financial highway unprecedented in bilateral relations:</p>
+                    <ul class="text-sm text-gray-600 list-inside space-y-1">
+                        <li>✓ Local currency settlement (INR-AED)</li>
+                        <li>✓ Payment networks integrated (UPI-AANI, RuPay-JAYWAN)</li>
+                        <li>✓ Stock exchange cooperation (BSE-ADX)</li>
+                        <li>✓ Financial hub linkage (GIFT City-ADGM)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">⚡ Dual-Track Energy Strategy</h4>
+                    <p class="text-gray-700 mb-2">Bridging old-era and new-era energy security simultaneously:</p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li><strong>Old Era:</strong> Oil equity, LNG supply, strategic reserves</li>
+                        <li><strong>New Era:</strong> Renewables, nuclear cooperation, critical minerals</li>
+                        <li>Ensures India's energy security during the transition decades</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-xl font-bold text-blue-800 mb-3">🔐 Deep Security Synchronization</h4>
+                    <p class="text-gray-700 mb-2">Tight intelligence and security cooperation framework:</p>
+                    <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                        <li>Extradition treaty ending safe haven status (1999)</li>
+                        <li>MLAT enabling cross-border investigations</li>
+                        <li>Counter-terrorism & anti-money laundering coordination</li>
+                        <li>Cyber-security joint frameworks</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+            <h3 class="text-3xl font-bold text-center mb-4">Future Horizons (2025–2030)</h3>
+            <p class="text-lg text-gray-700 max-w-4xl mx-auto text-center mb-10">Based on current trajectories and the logic of existing agreements, these are the most probable next-phase developments in the India-UAE strategic partnership.</p>
+
+            <div class="space-y-4 max-w-5xl mx-auto">
+                
+                <div class="p-5 bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-blue-900 mb-2">💱 Digital Financial Twin Ecosystem</h4>
+                    <p class="text-gray-700">Cross-border CBDC (Digital Rupee-Digital Dirham), joint fintech sandboxes under ADGM-GIFT City, and real-time cross-exchange trading platforms for near-frictionless capital markets.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-green-100 to-green-50 rounded-lg border-l-4 border-green-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-green-900 mb-2">🌱 Green Hydrogen & Renewable Mega Projects</h4>
+                    <p class="text-gray-700">Sub-sea green energy grids connecting UAE and India, green ammonia export corridors, and hydrogen storage infrastructure as UAE targets global hydrogen leadership.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-yellow-100 to-yellow-50 rounded-lg border-l-4 border-yellow-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-yellow-900 mb-2">⛏️ India-UAE Critical Minerals Fund</h4>
+                    <p class="text-gray-700">Formation of joint investment vehicle for bidding on lithium, nickel, and cobalt resources in Africa, Latin America, and Australia—expanding the 2024 IRH partnership.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-red-100 to-red-50 rounded-lg border-l-4 border-red-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-red-900 mb-2">🛡️ Defense Manufacturing & Joint Production</h4>
+                    <p class="text-gray-700">UAE investment in Indian drone and naval vessel manufacturing, co-production of air-defense systems, and integration of UAE into India's defense supply chain.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-purple-100 to-purple-50 rounded-lg border-l-4 border-purple-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-purple-900 mb-2">🚢 Mumbai-Gujarat-Jebel Ali-Rotterdam Super Corridor</h4>
+                    <p class="text-gray-700">DP World + Adani integrated logistics chain under IMEC, creating seamless maritime and air cargo connectivity from India to Europe via UAE.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-lime-100 to-lime-50 rounded-lg border-l-4 border-lime-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-lime-900 mb-2">🌾 Agri-Tech Parks Expansion</h4>
+                    <p class="text-gray-700">UAE-backed mega food parks across UP, MP, Maharashtra with integrated cold chain and storage infrastructure, expanding beyond Gujarat pilot.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-indigo-100 to-indigo-50 rounded-lg border-l-4 border-indigo-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-indigo-900 mb-2">🎓 Education & AI Ecosystems</h4>
+                    <p class="text-gray-700">UAE funding for IIT lab clusters, joint degree programs in AI/space/nuclear engineering, and structured tech talent pipeline to UAE's Vision 2030 initiatives.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-pink-100 to-pink-50 rounded-lg border-l-4 border-pink-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-pink-900 mb-2">🚀 Space Technology Industrialization</h4>
+                    <p class="text-gray-700">Joint satellite manufacturing facilities in Abu Dhabi or Bengaluru, and UAE participation in India's Gaganyaan and lunar exploration programs.</p>
+                </div>
+
+                <div class="p-5 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg border-l-4 border-orange-600 hover:shadow-lg transition-shadow">
+                    <h4 class="text-lg font-bold text-orange-900 mb-2">🎬 Cultural Soft-Power Expansion</h4>
+                    <p class="text-gray-700">Museum partnerships, Indian film industry production incentives in UAE, and UAE-funded heritage restoration projects across India.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-r from-gray-50 to-blue-50 p-6 md:p-8 rounded-lg shadow-lg mb-12">
+            <h3 class="text-3xl font-bold text-center mb-6">The Geoeconomic Significance</h3>
+            <div class="max-w-5xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-2xl font-bold text-blue-900 mb-3">A Partnership Beyond Bilateralism</h4>
+                    <p class="text-gray-700 leading-relaxed">The India-UAE relationship has transcended traditional bilateral frameworks to become a critical node in emerging multilateral architectures. Through initiatives like <strong>I2U2</strong> (India-Israel-UAE-USA) and the <strong>India-Middle East-Europe Economic Corridor (IMEC)</strong>, this partnership now serves as a cornerstone for regional connectivity and a counterweight to alternative geopolitical visions.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-2xl font-bold text-blue-900 mb-3">From Promises to Implementation</h4>
+                    <p class="text-gray-700 leading-relaxed">The establishment of <strong>dedicated working groups</strong> alongside every major agreement marks a fundamental shift from declaratory diplomacy to implementation-focused governance. This institutional architecture ensures that the ambitious targets—from the $100 billion trade goal to the operationalization of payment system interlinks—translate into tangible outcomes.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h4 class="text-2xl font-bold text-blue-900 mb-3">Securing the Energy Transition Together</h4>
+                    <p class="text-gray-700 leading-relaxed">The dual-track energy strategy—maintaining traditional hydrocarbon partnerships while simultaneously investing in nuclear, renewables, and critical minerals—positions both nations to navigate the turbulent decades of energy transition. India gains energy security during growth; UAE secures long-term relevance beyond oil.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center p-8 bg-gradient-to-r from-blue-900 to-teal-700 text-white rounded-lg shadow-xl">
+            <h3 class="text-3xl font-bold mb-4">A Geoeconomic Axis for the 21st Century</h3>
+            <p class="text-lg md:text-xl max-w-4xl mx-auto font-light leading-relaxed">Over 50 years, the India-UAE partnership has evolved from foundational cultural agreements to a sophisticated web of economic, security, and technological integration. This is no longer merely a bilateral friendship—it is a <strong>geoeconomic axis</strong> essential for stability and prosperity in the corridor connecting the Middle East to South Asia. With deep financial interoperability, energy co-dependence, and aligned strategic visions, India and UAE have constructed one of the most comprehensive partnerships of the modern era.</p>
+            <p class="text-md mt-6 opacity-90">From the Cultural Agreement of 1975 to the Critical Minerals Partnership of 2024—a journey of deliberate, strategic convergence.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 14,
+                            family: "'Inter', sans-serif"
+                        },
+                        color: '#1f2937'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const mouGrowthCtx = document.getElementById('mouGrowthChart').getContext('2d');
+        new Chart(mouGrowthCtx, {
+            type: 'bar',
+            data: {
+                labels: ['1975-1992\nFoundational', '1994-2010\nSecurity', '2015-2020\nStrategic', '2022-2025\nIntegration'],
+                datasets: [{
+                    label: 'Maximum Agreements per Visit',
+                    data: [2, 5, 12, 15],
+                    backgroundColor: ['#000000', '#333333', '#666666', '#999999'],
+                    borderWidth: 0,
+                    borderRadius: 0
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Agreements',
+                            font: { family: "'Inter', sans-serif", size: 13, weight: '600' },
+                            color: '#000000'
+                        },
+                        ticks: {
+                            color: '#000000',
+                            font: { family: "'Inter', sans-serif", weight: '500' }
+                        },
+                        grid: { color: '#e5e5e5', drawBorder: false }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#000000',
+                            font: { family: "'Inter', sans-serif", weight: '500' }
+                        },
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+        
+        const foundationalCtx = document.getElementById('foundationalChart').getContext('2d');
+        new Chart(foundationalCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Legal & Judicial', 'Trade & Commerce', 'Counter-Terrorism', 'Defense', 'Labor Rights'],
+                datasets: [{
+                    data: [25, 20, 20, 20, 15],
+                    backgroundColor: ['#000000', '#333333', '#555555', '#777777', '#999999'],
+                    borderWidth: 0,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const strategicCtx = document.getElementById('strategicChart').getContext('2d');
+        new Chart(strategicCtx, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    'Energy Equity', 'Nuclear', 'Space', 'Critical Minerals',
+                    'CEPA', 'Financial Systems', 'Food Security', 
+                    'Digital Infrastructure', 'Education', 'IMEC', 'Defense Industry'
+                ],
+                datasets: [{
+                    data: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                    backgroundColor: [
+                        '#000000', '#1a1a1a', '#2d2d2d', '#404040', '#525252',
+                        '#666666', '#7a7a7a', '#8f8f8f', '#a3a3a3', '#b8b8b8', '#cccccc'
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { 
+                        display: false 
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + ' sector' + (context.parsed > 1 ? 's' : '');
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
